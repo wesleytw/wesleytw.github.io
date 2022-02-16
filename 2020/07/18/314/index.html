@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-141118659-6"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141118659-6', { 'anonymize_ip': false } );
+</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script><title>程式麻瓜打造區塊鏈網站8-資料儲存Mapping&Event - 劉承瑋</title><meta name="description" content="將上方的成績表化成Mappingstep1.宣告陣列， 將名字當作索引對應到成績mapping(索引型別=>對應值型別) public 陣列名稱; 宣告如下:mapping(string => uint) public classtranscriptstep2.填入各個索引的對應值classtranscript [小王] = 100;"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="程式麻瓜打造區塊鏈網站8-資料儲存Mapping&Event - 劉承瑋"><meta property="og:description" content="將上方的成績表化成Mappingstep1.宣告陣列， 將名字當作索引對應到成績mapping(索引型別=>對應值型別) public 陣列名稱; 宣告如下:mapping(string => uint) public classtranscriptstep2.填入各個索引的對應值classtranscript [小王] = 100;"><meta property="og:url" content="http://localhost/2020/07/18/314/"><meta property="og:site_name" content="劉承瑋"><meta property="article:published_time" content="2020-07-18T08:58:55+00:00"><meta property="article:modified_time" content="2020-07-21T13:50:36+00:00"><meta property="og:image" content="https://cdn-images-1.medium.com/max/720/1*mwtRxTvTvmtQcsfCO21fvg.png"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json" class="yoast-schema-graph">{
+	    "@context": "https://schema.org",
+	    "@graph": [
+	        {
+	            "@type": "WebSite",
+	            "@id": "https://wesleytw.github.io/#website",
+	            "url": "https://wesleytw.github.io/",
+	            "name": "\u5289\u627f\u744b",
+	            "description": "WESLEY LIU",
+	            "publisher": {
+	                "@id": "https://wesleytw.github.io/#/schema/person/43497f4e83de7fea9fb73d825d6f0278"
+	            },
+	            "potentialAction": [
+	                {
+	                    "@type": "SearchAction",
+	                    "target": "https://wesleytw.github.io/?s={search_term_string}",
+	                    "query-input": "required name=search_term_string"
+	                }
+	            ],
+	            "inLanguage": "en-US"
+	        },
+	        {
+	            "@type": "ImageObject",
+	            "@id": "http://localhost/2020/07/18/314/#primaryimage",
+	            "inLanguage": "en-US",
+	            "url": "https://cdn-images-1.medium.com/max/720/1*mwtRxTvTvmtQcsfCO21fvg.png"
+	        },
+	        {
+	            "@type": "WebPage",
+	            "@id": "http://localhost/2020/07/18/314/#webpage",
+	            "url": "http://localhost/2020/07/18/314/",
+	            "name": "\u7a0b\u5f0f\u9ebb\u74dc\u6253\u9020\u5340\u584a\u93c8\u7db2\u7ad98-\u8cc7\u6599\u5132\u5b58Mapping&Event - \u5289\u627f\u744b",
+	            "isPartOf": {
+	                "@id": "https://wesleytw.github.io/#website"
+	            },
+	            "primaryImageOfPage": {
+	                "@id": "http://localhost/2020/07/18/314/#primaryimage"
+	            },
+	            "datePublished": "2020-07-18T08:58:55+00:00",
+	            "dateModified": "2020-07-21T13:50:36+00:00",
+	            "description": "\u5c07\u4e0a\u65b9\u7684\u6210\u7e3e\u8868\u5316\u6210Mappingstep1.\u5ba3\u544a\u9663\u5217\uff0c \u5c07\u540d\u5b57\u7576\u4f5c\u7d22\u5f15\u5c0d\u61c9\u5230\u6210\u7e3emapping(\u7d22\u5f15\u578b\u5225=>\u5c0d\u61c9\u503c\u578b\u5225) public \u9663\u5217\u540d\u7a31; \u5ba3\u544a\u5982\u4e0b:mapping(string => uint) public classtranscriptstep2.\u586b\u5165\u5404\u500b\u7d22\u5f15\u7684\u5c0d\u61c9\u503cclasstranscript [\u5c0f\u738b] = 100;",
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "ReadAction",
+	                    "target": [
+	                        "http://localhost/2020/07/18/314/"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "Article",
+	            "@id": "http://localhost/2020/07/18/314/#article",
+	            "isPartOf": {
+	                "@id": "http://localhost/2020/07/18/314/#webpage"
+	            },
+	            "author": {
+	                "@id": "https://wesleytw.github.io/#/schema/person/43497f4e83de7fea9fb73d825d6f0278"
+	            },
+	            "headline": "\u7a0b\u5f0f\u9ebb\u74dc\u6253\u9020\u5340\u584a\u93c8\u7db2\u7ad98-\u8cc7\u6599\u5132\u5b58Mapping&Event",
+	            "datePublished": "2020-07-18T08:58:55+00:00",
+	            "dateModified": "2020-07-21T13:50:36+00:00",
+	            "commentCount": 0,
+	            "mainEntityOfPage": {
+	                "@id": "http://localhost/2020/07/18/314/#webpage"
+	            },
+	            "publisher": {
+	                "@id": "https://wesleytw.github.io/#/schema/person/43497f4e83de7fea9fb73d825d6f0278"
+	            },
+	            "image": {
+	                "@id": "http://localhost/2020/07/18/314/#primaryimage"
+	            },
+	            "keywords": "blockchain,Dapp,HTML,smartcontract,\u5340\u584a\u93c8,\u667a\u80fd\u5408\u7d04,\u7db2\u9801\u67b6\u8a2d,\u7db2\u9801\u7a0b\u5f0f,\u7db2\u9801\u8a2d\u8a08",
+	            "articleSection": "Blockchain",
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "CommentAction",
+	                    "name": "Comment",
+	                    "target": [
+	                        "http://localhost/2020/07/18/314/#respond"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": [
+	                "Person",
+	                "Organization"
+	            ],
+	            "@id": "https://wesleytw.github.io/#/schema/person/43497f4e83de7fea9fb73d825d6f0278",
+	            "name": "admin",
+	            "image": {
+	                "@type": "ImageObject",
+	                "@id": "https://wesleytw.github.io/#personlogo",
+	                "inLanguage": "en-US",
+	                "url": "http://1.gravatar.com/avatar/aa8d2e372ece71b92694b5941ff4e8cd?s=96&d=mm&r=g",
+	                "caption": "admin"
+	            },
+	            "logo": {
+	                "@id": "https://wesleytw.github.io/#personlogo"
+	            }
+	        }
+	    ]
+	}</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://wesleytw.github.io/wp-includes/css/dist/block-library/style.min.css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://wesleytw.github.io/wp-includes/css/dist/block-library/theme.min.css" media="all"><link rel="stylesheet" id="awsm-ead-public-css" href="https://wesleytw.github.io/wp-content/plugins/embed-any-document/css/embed-public.min.css" media="all"><link rel="stylesheet" id="twentyfifteen-fonts-css" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&subset=latin%2Clatin-ext&display=fallback" media="all"><link rel="stylesheet" id="genericons-css" href="https://wesleytw.github.io/wp-content/themes/twentyfifteen/genericons/genericons.css" media="all"><link rel="stylesheet" id="twentyfifteen-style-css" href="https://wesleytw.github.io/wp-content/themes/twentyfifteen/style.css" media="all"><style id="twentyfifteen-style-inline-css">
+
+		/* Custom Sidebar Text Color */
+		.site-title a,
+		.site-description,
+		.secondary-toggle:before {
+			color: #1e73be;
+		}
+
+		.site-title a:hover,
+		.site-title a:focus {
+			color: #1e73be; /* Fallback for IE7 and IE8 */
+			color: rgba( 30, 115, 190, 0.7);
+		}
+
+		.secondary-toggle {
+			border-color: #1e73be; /* Fallback for IE7 and IE8 */
+			border-color: rgba( 30, 115, 190, 0.1);
+		}
+
+		.secondary-toggle:hover,
+		.secondary-toggle:focus {
+			border-color: #1e73be; /* Fallback for IE7 and IE8 */
+			border-color: rgba( 30, 115, 190, 0.3);
+		}
+
+		.site-title a {
+			outline-color: #1e73be; /* Fallback for IE7 and IE8 */
+			outline-color: rgba( 30, 115, 190, 0.3);
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.secondary a,
+			.dropdown-toggle:after,
+			.widget-title,
+			.widget blockquote cite,
+			.widget blockquote small {
+				color: #1e73be;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a {
+				background-color: #1e73be;
+			}
+
+			.textwidget a {
+				border-color: #1e73be;
+			}
+
+			.secondary a:hover,
+			.secondary a:focus,
+			.main-navigation .menu-item-description,
+			.widget,
+			.widget blockquote,
+			.widget .wp-caption-text,
+			.widget .gallery-caption {
+				color: rgba( 30, 115, 190, 0.7);
+			}
+
+			.widget button:hover,
+			.widget button:focus,
+			.widget input[type="button"]:hover,
+			.widget input[type="button"]:focus,
+			.widget input[type="reset"]:hover,
+			.widget input[type="reset"]:focus,
+			.widget input[type="submit"]:hover,
+			.widget input[type="submit"]:focus,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				background-color: rgba( 30, 115, 190, 0.7);
+			}
+
+			.widget blockquote {
+				border-color: rgba( 30, 115, 190, 0.7);
+			}
+
+			.main-navigation ul,
+			.main-navigation li,
+			.secondary-toggle,
+			.widget input,
+			.widget textarea,
+			.widget table,
+			.widget th,
+			.widget td,
+			.widget pre,
+			.widget li,
+			.widget_categories .children,
+			.widget_nav_menu .sub-menu,
+			.widget_pages .children,
+			.widget abbr[title] {
+				border-color: rgba( 30, 115, 190, 0.1);
+			}
+
+			.dropdown-toggle:hover,
+			.dropdown-toggle:focus,
+			.widget hr {
+				background-color: rgba( 30, 115, 190, 0.1);
+			}
+
+			.widget input:focus,
+			.widget textarea:focus {
+				border-color: rgba( 30, 115, 190, 0.3);
+			}
+
+			.sidebar a:focus,
+			.dropdown-toggle:focus {
+				outline-color: rgba( 30, 115, 190, 0.3);
+			}
+		}
+	
+</style><link rel="stylesheet" id="twentyfifteen-block-style-css" href="https://wesleytw.github.io/wp-content/themes/twentyfifteen/css/blocks.css" media="all"><script src="https://wesleytw.github.io/wp-includes/js/jquery/jquery.js"></script><script src="https://wesleytw.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script>
+var ga_options = {"link_clicks_delay":"120","gtm":"0","anonymizeip":"0","advanced":"0","snippet_type":"gst","tracking_id":"UA-141118659-6","gtm_id":"","domain":"","scroll_elements":[],"click_elements":[]};
+</script><script src="https://wesleytw.github.io/wp-content/plugins/wp-google-analytics-events/js/main.js"></script><meta name="google-site-verification" content="8KpLjdeshC90-GoYP-bI31Oo62JCYsA6E1IWmYIrd7U"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-141118659-6"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141118659-6');
+</script><style id="custom-background-css">
+body.custom-background { background-color: #001230; }
+</style><link rel="preload" as="style" href="https://wesleytw.github.io/wp-content/plugins/code-prettify/prettify/prettify.css"><link rel="icon" href="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-2-32x32.jpg" sizes="32x32"><link rel="icon" href="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-2-192x192.jpg" sizes="192x192"><link rel="apple-touch-icon" href="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-2-180x180.jpg"><meta name="msapplication-TileImage" content="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-2-270x270.jpg"></head><body class="post-template-default single single-post postid-314 single-format-standard custom-background wp-custom-logo wp-embed-responsive elementor-default">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner"><div class="site-branding">
+				<a href="https://wesleytw.github.io/" class="custom-logo-link" rel="home"><img width="248" height="248" src="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n.jpg" class="custom-logo" alt="劉承瑋" srcset="https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n.jpg 248w,https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-150x150.jpg 150w" sizes="(max-width: 248px) 100vw, 248px"></a>						<p class="site-title"><a href="https://wesleytw.github.io/" rel="home">劉承瑋</a></p>
+												<p class="site-description">WESLEY LIU</p>
+										<button class="secondary-toggle">Menu and widgets</button>
+			</div>
+		</header><div id="secondary" class="secondary">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation"><div class="menu-main-container"><ul id="menu-main" class="nav-menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-33"><a href="https://wesleytw.github.io/">Home</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-38"><a href="https://wesleytw.github.io/category/blockchain/">Blockchain</a>
+<ul class="sub-menu"><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-55"><a href="https://wesleytw.github.io/2020/06/30/46/">程式麻瓜打造區塊鏈網站-系列文索引</a></li>
+	<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-54"><a href="https://wesleytw.github.io/2020/06/30/50/">程式麻瓜打造區塊鏈網站-系列文1-網頁的編輯方法</a></li>
+	<li id="menu-item-199" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-199"><a href="https://wesleytw.github.io/2020/07/01/151/">程式麻瓜打造區塊鏈網站2-HTML介紹</a></li>
+	<li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-86"><a href="https://wesleytw.github.io/2020/07/01/65/">程式麻瓜打造區塊鏈網站3-css/js和網頁特效</a></li>
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-87"><a href="https://wesleytw.github.io/2020/07/01/79/">程式麻瓜打造區塊鏈網站4-超強大chrome編輯網頁小工具VisBug</a></li>
+	<li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-291"><a href="https://wesleytw.github.io/2020/07/03/215/">程式麻瓜打造區塊鏈網站5–智能合約介紹、編寫環境</a></li>
+	<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-324"><a href="https://wesleytw.github.io/2020/07/18/303/">程式麻瓜打造區塊鏈網站6–Hello World</a></li>
+	<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-325"><a href="https://wesleytw.github.io/2020/07/18/312/">程式麻瓜打造區塊鏈網站7-solidity運算子,型別,區塊鏈相關資訊變數</a></li>
+	<li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-326"><a href="https://wesleytw.github.io/2020/07/18/314/" aria-current="page">程式麻瓜打造區塊鏈網站8-資料儲存Mapping&Event</a></li>
+	<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-327"><a href="https://wesleytw.github.io/2020/07/18/316/">程式麻瓜打造區塊鏈網站9-solidity Require&Modifier函式修飾詞</a></li>
+	<li id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-328"><a href="https://wesleytw.github.io/2020/07/18/318/">程式麻瓜打造區塊鏈網站10-200ok chrome 伺服器擴充功能</a></li>
+	<li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-329"><a href="https://wesleytw.github.io/2020/07/18/320/">程式麻瓜打造區塊鏈網站11-連接&檢查Metamask(request metamask conncetion)</a></li>
+</ul></li>
+<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-309"><a href="https://wesleytw.github.io/service/">Service</a>
+<ul class="sub-menu"><li id="menu-item-110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"><a target="_blank" rel="noopener noreferrer" href="https://jackeyliu.000webhostapp.com/">Upload to blockchain service</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a href="https://jackeyliu.000webhostapp.com/">資料上鏈服務</a></li>
+</ul></li>
+<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-208"><a href="https://wesleytw.github.io/blog-2/">Blog</a></li>
+<li id="menu-item-830" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-830"><a href="https://wesleytw.github.io/category/publication/">Publication</a></li>
+<li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="https://wesleytw.github.io/about-me/">About me</a></li>
+<li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="https://wesleytw.github.io/workspace/">Workspace</a></li>
+</ul></div>			</nav><nav id="social-navigation" class="social-navigation" role="navigation"><div class="menu-social-container"><ul id="menu-social" class="menu"><li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a href="https://www.facebook.com/jackey1999/"><span class="screen-reader-text">FB</span></a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="https://github.com/jackeyliutw"><span class="screen-reader-text">GH</span></a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a href="mailto:bill411493@gmail.com"><span class="screen-reader-text">mail</span></a></li>
+<li id="menu-item-680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-680"><a href="https://www.linkedin.com/in/%E6%89%BF%E7%91%8B-%E5%8A%89-4144b5ba/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li id="menu-item-847" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-847"><a href="https://twitter.com/LCWesley1230"><span class="screen-reader-text">twitter</span></a></li>
+</ul></div>			</nav><div id="widget-area" class="widget-area" role="complementary">
+				<aside id="elementor-library-3" class="widget widget_elementor-library"></aside></div>
+		
+	</div>
+
+	</div>
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main"><article id="post-314" class="post-314 post type-post status-publish format-standard hentry category-blockchain tag-blockchain tag-dapp tag-html tag-smartcontract tag-8 tag-10 tag-9 tag-12 tag-11"><header class="entry-header"><h1 class="entry-title">程式麻瓜打造區塊鏈網站8-資料儲存Mapping&Event</h1>	</header><div class="entry-content">
+		
+<hr class="wp-block-separator"><p>Mapping 是一種陣列，陣列是用來儲存資料的，像是班級成績單就是一個陣列，一個班級成績單會有欄和列，欄可能放姓名，列就放成績，如下圖</p>
+
+
+
+<figure class="wp-block-image"><img src="https://cdn-images-1.medium.com/max/720/1*mwtRxTvTvmtQcsfCO21fvg.png" alt=""></figure><p>將上方的成績表化成Mapping:</p>
+
+
+
+<span id="more-314"></span>
+
+
+
+<p>step1.宣告陣列， 將名字當作索引對應到成績</p>
+
+
+
+<p>mapping(索引型別=>對應值型別) public 陣列名稱; 宣告如下:</p>
+
+
+
+<p>mapping(string => uint) public classtranscript;</p>
+
+
+
+<p>step2.填入各個索引的對應值</p>
+
+
+
+<p>classtranscript [小王] = 100;</p>
+
+
+
+<p>classtranscript [曉明] = 50;</p>
+
+
+
+<p>classtranscript [阿明] = 60; ……</p>
+
+
+
+<pre class="wp-block-preformatted">// SPDX-License-Identifier: MIT<br>pragma solidity ^0.6.0;<br>contract mapping1 {<br>    mapping (string=>uint) public classtranscript;<br>    constructor () public {<br>    classtranscript ["xiaowan"] = 100;<br>    classtranscript ["xiaomin"] = 50;<br>    //以下省略<br>    }<br>}<br></pre>
+
+
+
+<figure class="wp-block-image"><img src="https://cdn-images-1.medium.com/max/720/1*OfmwU7xsSN1KXO96bKiSZQ.png" alt=""><figcaption>透過remix查詢曉明成績</figcaption></figure><p>填入對應值後若要對對應值以索引做運算直接打出mapping名稱和索引即可對應值</p>
+
+
+
+<pre class="wp-block-preformatted">uint public c;<br> constructor () public {<br> classtranscript [“xiaowan”] = 100;<br> classtranscript [“xiaomin”] = 50;<br> c= classtranscript [“xiaomin”]+1;<br> }<br>//c值為51</pre>
+
+
+
+<hr class="wp-block-separator"><p>智能合約在運作的時候會產生很多資訊，像是目前的合約餘額、和合約互動者的地址、某些參數的數值或字串等，如果我們希望在進行某個函式的時候順便把這些資訊記錄下來的話就需要用到event，使用event需要先宣告</p>
+
+
+
+<p>event 事件名稱 ( 資訊型別1 代稱1,資訊型別2 代稱2, 資訊型別3 代稱3); 如下我們做一個event讓同學留言並記錄留言者地址和當下時間的event:</p>
+
+
+
+<pre class="wp-block-preformatted">event classbulletin ( string message, address student,  uint now);</pre>
+
+
+
+<p>觸發event用emit:</p>
+
+
+
+<p>emit classtranscript(要輸入到代稱1的參數或值, 要輸入到代稱2的參數或值);</p>
+
+
+
+<pre class="wp-block-preformatted">function updatebulletin(string saysomething)public{<br>emit classbulletin ( saysomething, msg.sender, now);<br>}</pre>
+<iframe scrolling="no" frameborder="0" style="height: 212px; width: 100%;" src="https://button.like.co/in/embed/bill411493/button?type=wp&referrer=http%3A%2F%2Flocalhost%3A8888%2F2020%2F07%2F18%2F314%2F"></iframe>	</div>
+
+	
+	<footer class="entry-footer"><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://wesleytw.github.io/2020/07/18/314/" rel="bookmark"><time class="entry-date published" datetime="2020-07-18T16:58:55+08:00">July 18, 2020</time><time class="updated" datetime="2020-07-21T21:50:36+08:00">July 21, 2020</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author </span><a class="url fn n" href="https://wesleytw.github.io/author/admin/">admin</a></span></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://wesleytw.github.io/category/blockchain/" rel="category tag">Blockchain</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://wesleytw.github.io/tag/blockchain/" rel="tag">blockchain</a>, <a href="https://wesleytw.github.io/tag/dapp/" rel="tag">Dapp</a>, <a href="https://wesleytw.github.io/tag/html/" rel="tag">HTML</a>, <a href="https://wesleytw.github.io/tag/smartcontract/" rel="tag">smartcontract</a>, <a href="https://wesleytw.github.io/tag/%e5%8d%80%e5%a1%8a%e9%8f%88/" rel="tag">區塊鏈</a>, <a href="https://wesleytw.github.io/tag/%e6%99%ba%e8%83%bd%e5%90%88%e7%b4%84/" rel="tag">智能合約</a>, <a href="https://wesleytw.github.io/tag/%e7%b6%b2%e9%a0%81%e6%9e%b6%e8%a8%ad/" rel="tag">網頁架設</a>, <a href="https://wesleytw.github.io/tag/%e7%b6%b2%e9%a0%81%e7%a8%8b%e5%bc%8f/" rel="tag">網頁程式</a>, <a href="https://wesleytw.github.io/tag/%e7%b6%b2%e9%a0%81%e8%a8%ad%e8%a8%88/" rel="tag">網頁設計</a></span>			</footer></article><div id="lfc_comments" class="comments-area" align="center">
+			</div>
+
+
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts"><h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://wesleytw.github.io/2020/07/18/312/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">程式麻瓜打造區塊鏈網站7-solidity運算子,型別,區塊鏈相關資訊變數</span></a></div><div class="nav-next"><a href="https://wesleytw.github.io/2020/07/18/316/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">程式麻瓜打造區塊鏈網站9-solidity Require&Modifier函式修飾詞</span></a></div></div>
+	</nav></main></div>
+
+
+	</div>
+
+	<footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info">
+									<p>© 2022 <a href="https://jackeyliutw.github.io/">Wesley Liu</a> Taiwan</p>
+
+		</div>
+	</footer></div>
+
+<script src="https://wesleytw.github.io/wp-content/plugins/embed-any-document/js/pdfobject.min.js"></script><script>
+var eadPublic = [];
+</script><script src="https://wesleytw.github.io/wp-content/plugins/embed-any-document/js/embed-public.min.js"></script><script>
+var codePrettifyLoaderBaseUrl = "https:\/\/wesleytw.github.io\/wp-content\/plugins\/code-prettify\/prettify";
+</script><script src="https://wesleytw.github.io/wp-content/plugins/code-prettify/prettify/run_prettify.js"></script><script src="https://wesleytw.github.io/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js"></script><script>
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+</script><script src="https://wesleytw.github.io/wp-content/themes/twentyfifteen/js/functions.js"></script><script type="text/javascript">function loadLFCComments() {(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=783458885728487';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    }window.onscroll = function () {
+                        var rect = document.getElementById('lfc_comments').getBoundingClientRect();
+                        if (rect.top < window.innerHeight) {
+                            var lfc_div = document.getElementById('lfc_comments');
+                            lfc_div.innerHTML = '<div id="fb-root"><div class="fb-comments" data-width="100%" data-href="https://wesleytw.github.io/2020/07/18/314/" data-numposts="10" data-colorscheme="light" data-order-by="social">';
+                            loadLFCComments();
+                            window.onscroll = null;
+                        } 
+                    }</script></body></html>

@@ -1,0 +1,15 @@
+.blox_instagram_latest_image * {margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.blox_instagram_latest_image .blox_instagram_latest_image_container {background-color: #fff;padding: 0px;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;border-radius: 5px;box-shadow: 0 20px 30px 0 rgba(0,0,0,.06);position: relative;}
+.blox_instagram_latest_image .blox_instagram_latest_image_container img {vertical-align: top;height: auto;width: 100%;max-width: 100%;}
+.blox_instagram_latest_image .blox_image_box {position: relative;z-index: 2;}
+.blox_instagram_latest_image .blox_overlay {position: absolute;z-index: 2;width: 100%;left: 0;height: 100%;top: 0;background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);}
+.blox_instagram_latest_image .blox_profile_pic {max-width: 83px;max-height: 83px;border: 3px solid #fff;-webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;border-radius: 50%;overflow: hidden;float: left;}
+.blox_instagram_latest_image .blox_meta_content {position: absolute;left: 0;top: 0;height: 100%;width: 100%;z-index: 3;}
+.blox_instagram_latest_image .blox_instagram_info {padding: 20px;color: #fff;position: absolute;width: 100%;left: 0;bottom: 0;}
+.blox_instagram_latest_image .blox_cta {text-align: right;padding: 20px;}
+.blox_instagram_latest_image .blox_cta a {text-decoration: none;display: inline-block;color: #000;background-color: #fff;border-radius: 5px;font-size: 13px;font-weight: 600;padding: 8px 12px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);}
+.blox_instagram_latest_image .blox_profile_name {font-family: inherit;font-size: 18px;font-weight: bold;line-height: 28px;}
+.blox_instagram_latest_image .blox_follow_count {font-size: 13px;line-height: 22px;font-family: inherit;}
+.blox_instagram_latest_image .blox_profile_content {float: left;margin-top: 15px;margin-left: 15px;}
+.blox_instagram_latest_image .blox_instagram_info:before, .blox_instagram_latest_image .blox_instagram_info:after {content: " ";display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}
+.blox_instagram_latest_image .blox_instagram_info:after {clear: both;}

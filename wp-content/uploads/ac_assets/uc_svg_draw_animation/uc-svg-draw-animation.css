@@ -1,0 +1,4 @@
+.uc-svg-draw-animation {box-sizing: border-box;}
+.uc-svg-draw-animation * {box-sizing: inherit;}
+.uc-svg-draw-animation ::after, .uc-svg-draw-animation ::before {box-sizing: inherit;}
+.uc-svg-draw-animation .uc-sda-content {}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Boxed Bar Counter</title><link href="blox-boxed-bar-counter.css" rel="stylesheet" type="text/css"></head><body>
+	<div class="blox-boxed-bar-counter" id="dynamic-id">
+        <div class="blox-bar-row progress-seven" role="progressbar" data-goal="50" data-speed="20">
+            <div class="blox-border-bar" style="background-color:#ededed;">
+                <div class="blox-border-progress-bar progress-seven__bar" style="background-color:#7a61d4;"></div>
+                <div class="blox-bar-heading">
+                    <div class="blox-border-bar-percentage progress-seven__label"></div>
+                    <div class="blox-bar-title">Photoshop</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blox-bar-row progress-seven" role="progressbar" data-goal="75" data-speed="40">
+            <div class="blox-border-bar" style="background-color:#ededed;">
+                <div class="blox-border-progress-bar progress-seven__bar" style="background-color:#02d0b3;"></div>
+                <div class="blox-bar-heading">
+                	<div class="blox-border-bar-percentage progress-seven__label"></div>
+                    <div class="blox-bar-title">Illiustrator</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blox-bar-row progress-seven" role="progressbar" data-goal="50" data-speed="60">
+            <div class="blox-border-bar" style="background-color:#ededed;">
+                <div class="blox-border-progress-bar progress-seven__bar" style="background-color:#e0107e;"></div>
+                <div class="blox-bar-heading">
+                    <div class="blox-border-bar-percentage progress-seven__label"></div>
+                    <div class="blox-bar-title">Indesign</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery-asProgress.min.js"></script><script type="text/javascript">
+		jQuery(function($) {
+			var waypoints = $('#dynamic-id').waypoint({
+			  handler: function(direction) {
+				$('.progress-seven').asProgress({'namespace': 'progress-seven'});
+				$('.progress-seven').asProgress('start');
+			  },
+				offset: "50%"
+			})
+		});
+	</script></body></html>

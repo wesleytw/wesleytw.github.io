@@ -1,0 +1,14 @@
+.blox-classic-pointer-timeline * {margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.blox-classic-pointer-timeline {font-family: inherit;font-size: 14px;color: #333;padding: 0px 20px;margin: 0px;list-style: none;text-align: left;}
+.blox-classic-pointer-timeline li {position: relative;padding: 20px 0 0px 0;margin: 0px 0 0px 0px;}
+.blox-classic-pointer-timeline li ul {list-style: none;margin: 10px 0 0 0;}
+.blox-classic-pointer-timeline li ul li:before {display: none;}
+.blox-classic-pointer-timeline li:last-child::before {height: 81%;}
+.blox-classic-pointer-timeline li ul li {margin: 0;padding: 4px 0 4px 0;}
+.blox-classic-pointer-timeline li:before {position: absolute;left: 0px;top: 22px;content: "";height: 100%;border-left: #d5d5d5 1px solid;}
+.blox-classic-pointer-timeline li .blox-wrapper {padding: 20px 24px 20px 28px;margin: 0 0 0 40px;position: relative;}
+.blox-classic-pointer-timeline li .blox-wrapper:before {display: block;content: "";}
+.blox-classic-pointer-timeline .blox-dote {position: absolute;width: 16px;height: 16px;left: -41px;top: 21px;margin: 0px 0 0px -7px;display: block;border-radius: 50%;}
+.blox-classic-pointer-timeline .blox-content {font-size: 14px;line-height: 19px;}
+.blox-classic-pointer-timeline .blox-heading {font-size: 18px;font-weight: bold;margin: 0 0 12px 0;}
+.blox-classic-pointer-timeline li .blox-wrapper:before {width: 20px;height: 20px;display: block;content: "";transform: rotate(-45deg);position: absolute;left: -9px;top: 20px;background-color: inherit;}

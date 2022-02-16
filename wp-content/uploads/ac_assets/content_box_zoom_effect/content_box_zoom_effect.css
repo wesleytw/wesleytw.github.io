@@ -1,0 +1,10 @@
+.uc_content_box_zoom_effect * {margin: 0;padding: 0;}
+.uc_content_box_zoom_effect {background-color: #fff;text-align: center;transition: all .8s ease 0s;}
+.uc_content_box_zoom_effect:hover {box-shadow: 0 -2px 29px 0 rgba(0,0,0,.15);}
+.uc_content_box_zoom_effect:hover .uc_image {transform: scale(1.2);transition: all .8s ease 0s;}
+.uc_content_box_zoom_effect .uc_thumbnail {display: block;overflow: hidden;text-decoration: none;}
+.uc_content_box_zoom_effect .uc_image {width: 100%;transition: all .8s ease 0s;}
+.uc_content_box_zoom_effect .uc_all_category {display: block;margin: 24px 10px 0;font: 14px;color: #f5a64a;line-height: 20px;}
+.uc_content_box_zoom_effect .uc_title {display: block;margin: 11px 10px 0;font: 24px;color: #212121;line-height: 32px;text-decoration: none;transition: all .8s ease 0s;}
+.uc_content_box_zoom_effect .uc_content {margin: 15px 10px 0;font: 14px;color: #696969;line-height: 21px;}
+.uc_content_box_zoom_effect .uc_more {display: inline-block;margin: 20px 10px 40px;padding: 10px 25px;line-height: 17.15px;font: 500 12px;color: #fff;text-decoration: none;text-transform: uppercase;}
