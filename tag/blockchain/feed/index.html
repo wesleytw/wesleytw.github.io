@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>blockchain &#8211; 劉承瑋</title>
+	<atom:link href="http://localhost/tag/blockchain/feed/" rel="self" type="application/rss+xml" />
+	<link>http://wesleytw.github.io/</link>
+	<description>WESLEY LIU</description>
+	<lastBuildDate>Wed, 22 Jul 2020 16:05:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.9</generator>
+
+<image>
+	<url>https://wesleytw.github.io/wp-content/uploads/2020/06/cropped-18275252_1910720135878942_8499220454651592474_n-2-32x32.jpg</url>
+	<title>blockchain &#8211; 劉承瑋</title>
+	<link>http://wesleytw.github.io/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>程式麻瓜打造區塊鏈網站11-連接&#038;檢查Metamask(request metamask conncetion)</title>
+		<link>https://wesleytw.github.io/2020/07/18/320/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/320/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 09:10:08 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=320</guid>
+
+					<description><![CDATA[<p>當我們製作了一個網頁，要得到網頁訪客的帳戶資訊且與區塊鏈互動，就需要請求連接metamask，按下以下按鈕能夠請求連結，請將他的程式碼放到網頁裡。 if (typeof window.ethereum !== ‘undefined’) { console.log(‘MetaMask is installed!’);}else{ alert(“Please install MataMask”);} 上面這段程式碼是檢查訪客是否有安裝metamask若沒安裝就會跳出警告 const ethereumButton = document.querySelector(‘.enableEthereumButton’);ethereumButton.addEventListener(‘click’, () =&#62; { //Will Start the metamask extension ethereum.request({ method: ‘eth_requestAccounts’ });}); 上方程式碼是讓當class為enableEthereumButton的按鈕被按下的時候請求連接metamask，請求連接的程式碼是下面這行 ethereum.request({ method: ‘eth_requestAccounts’ }); 如果直接將它貼在網頁裡，當網頁被開啟或是重新整理就會自動請求，但是metamask不贊同用這樣的方法，所以還是乖乖放個按鈕比較保險。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/320/">程式麻瓜打造區塊鏈網站11-連接&#038;檢查Metamask(request metamask conncetion)</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/320/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站10-200ok chrome 伺服器擴充功能</title>
+		<link>https://wesleytw.github.io/2020/07/18/318/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/318/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 09:06:07 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=318</guid>
+
+					<description><![CDATA[<p>接下來我們要在自己電腦創造一個網頁與合約互動，與合約互動的其中一個橋樑是用metamask，但是他必須要網頁在有伺服器的狀態下才能使用。所以我們要使用Web Server for Chrome來模擬環境。 首先請點此進入安裝頁面進行安裝 之後請在桌面的地方創建一個資料夾，我們會在裡面放製作的網頁，可以先創造html,css,js檔案，接著，開啟200ok並選擇剛剛創建的資料夾(choose folder)。然後再網址的地方點開網址，如果有看到剛剛創建的資料夾和檔案就大功告成啦。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/318/">程式麻瓜打造區塊鏈網站10-200ok chrome 伺服器擴充功能</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/318/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站9-solidity Require&#038;Modifier函式修飾詞</title>
+		<link>https://wesleytw.github.io/2020/07/18/316/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/316/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 09:02:35 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=316</guid>
+
+					<description><![CDATA[<p>智能合約裡的函式我們不想讓每個人都能使用，而是只有自己能使用，或是需要達成某個條件才能使用的話就需要require，當然也可以用最傳統的if函式，以下舉例這個函式設定為只有部屬合約的人owner才能使用: address owner; //宣告地址變數ownerconstructor()public{ owner = msg.sender;}// 初始設定讓owner為與合約互動者的地址(這裡也就是部屬者) uint public count; function onlyOwner() public { if (msg.sender == owner) { count++; }//若與合約互動者為部屬者 則讓函式運行 使count加一 } onlyOwner這個函式如果呼叫者不是部屬者，則甚麼都不會改變;我們可以用require把if函式化簡 function onlyOwner() public { require (msg.sender==owner);//若與合約互動者為部屬者 則讓函式運行 count++; } 用require除了可以化簡之外的差異就是手續費，用if這個方式跑完函式，手續費就被吃掉了，但是用require則會直接中止並返還所有的手續費。另外，require通常是寫在函式的第一行，但是如果寫在後面，且不符合require條件，前面的指令一樣會被打回原形 uint publich count = 0;function onlyOwner() public { count++; //count為1 count++; //count為2 require (msg.sender==owner);//若互動者不是owner 前面指令通通不算 count++; }//count變回0 如果我們要讓很多函式都加入某個require條件，而且那個條件又臭又長的話，編輯和管理上就會很麻煩，所以要用modifier簡化 modifier &#8230; <a href="https://wesleytw.github.io/2020/07/18/316/" class="more-link">Continue reading <span class="screen-reader-text">程式麻瓜打造區塊鏈網站9-solidity Require&#038;Modifier函式修飾詞</span></a></p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/316/">程式麻瓜打造區塊鏈網站9-solidity Require&#038;Modifier函式修飾詞</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/316/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站8-資料儲存Mapping&#038;Event</title>
+		<link>https://wesleytw.github.io/2020/07/18/314/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/314/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 08:58:55 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=314</guid>
+
+					<description><![CDATA[<p>Mapping 是一種陣列，陣列是用來儲存資料的，像是班級成績單就是一個陣列，一個班級成績單會有欄和列，欄可能放姓名，列就放成績，如下圖 將上方的成績表化成Mapping: step1.宣告陣列， 將名字當作索引對應到成績 mapping(索引型別=&#62;對應值型別) public 陣列名稱; 宣告如下: mapping(string =&#62; uint) public classtranscript; step2.填入各個索引的對應值 classtranscript [小王] = 100; classtranscript [曉明] = 50; classtranscript [阿明] = 60;&#160;…… // SPDX-License-Identifier: MITpragma solidity ^0.6.0;contract mapping1 { mapping (string=&#62;uint) public classtranscript; constructor () public { classtranscript ["xiaowan"] = 100; classtranscript ["xiaomin"] = 50; //以下省略 }} 填入對應值後若要對對應值以索引做運算直接打出mapping名稱和索引即可對應值 uint public &#8230; <a href="https://wesleytw.github.io/2020/07/18/314/" class="more-link">Continue reading <span class="screen-reader-text">程式麻瓜打造區塊鏈網站8-資料儲存Mapping&#038;Event</span></a></p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/314/">程式麻瓜打造區塊鏈網站8-資料儲存Mapping&#038;Event</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/314/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站7-solidity運算子,型別,區塊鏈相關資訊變數</title>
+		<link>https://wesleytw.github.io/2020/07/18/312/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/312/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 08:53:56 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=312</guid>
+
+					<description><![CDATA[<p>solidity常見的運算子基本上和C語言一樣: 算數: 加+ 減- 乘* 除/ 求餘數% 平方** 遞增++ 遞減&#8211; 關係: 或&#124;&#124; 大於&#60; 小於&#62; 等於== 不等於!== &#160; 常見的型別如下: 常用資訊變數:</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/312/">程式麻瓜打造區塊鏈網站7-solidity運算子,型別,區塊鏈相關資訊變數</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/312/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站6–Hello World</title>
+		<link>https://wesleytw.github.io/2020/07/18/303/</link>
+					<comments>https://wesleytw.github.io/2020/07/18/303/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2020 08:24:52 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=303</guid>
+
+					<description><![CDATA[<p>在學習程式語言的時候通常都會從Hello World這個簡單的寫程式來看一個語言的架構，Hello World 程式就是單純使執行結果顯示Hello World字串而已，然而solidity並不像C語言等有print列印出字的這個指令，所以要讓執行結果顯示helloworld字樣並沒有特定方法，以下舉兩個例子分別是用變數的方式顯示，和讓函式傳回回傳值。 接下來，請先把上面的程式碼複製，在進入remix網頁新增檔案，將其貼上便以javaVM執行。 第1行: // SPDX-License-Identifier: MIT 這行是在新版remix新增的規範，在程式第一行註記你的程式碼要開放的權限，像是是否允許商業使用或是要載明作者等。我這裡使用MIT的授權規範，他算是最寬鬆的規範，允許商業使用，helloworld程式沒有人要偷所以選最寬鬆的就好了，如果想了解SPDX請參閱自由軟體授權資訊的標示說明與 SPDX或查詢SPDX授權表。 第2行: pragma solidity ^0.6.0; 這一行要指出這個程式符合第幾版的solidity規則，^這個符號表示&#8221;以上&#8221;，像這裡就是0.6.0以上。當然也能以區間表示，&#62;=0.5.0 &#60;0.6.0表示符合第0.5.0到0.6.0的規則。且要注意每個指令的最後都要以分號;結尾。 第3行:contract Helloworld {} solidity是物件導向語言，每個物件都是由某個Class所產生的一個Instance ，Class就如餅乾模具，Instance就是餅乾模具產出的餅乾，contract就是一個class內含Attribute(屬性,儲存物件的資訊，也就是變數)和Method(方法,操作物件的資訊，也就是函式)。反正就當作為合約命名而已。 第5~12行是一種方法:&#160; 先用string public sayhello;宣告一個叫sayhello的字串變數，public是指讓大家都能看到這個字串變數的值，也就會在remix顯示出按鈕，除了public的修飾詞還有external、internal、private。接著以constructor() public {}這個函式是指在合約部屬完會做的初始設定，我們這裡讓sayhello這個變數的值為helloworld這串字，要記得用“ ”框著字串，否則會使helloworld 被解讀成一個變數。 部署之後在remix左邊的地方點下sayhello按鈕就能看到helloworld字樣。在saysomething這個函式裡我們要先給予為string型態的輸入值sth，memory是指存在記憶體中。在這個函式裡我們把sayhello變數改成輸入值sth，就能顯示出其他文字了 。 第13~15行是另一總方法: method_2這個函式沒有輸入值有回傳值，用returns宣告出回傳值是個字串，在函式裡就直接用return回傳出字串。點下method_2按鈕後就能看見回傳的helloworld字樣。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/18/303/">程式麻瓜打造區塊鏈網站6–Hello World</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/18/303/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站5–智能合約介紹、編寫環境</title>
+		<link>https://wesleytw.github.io/2020/07/03/215/</link>
+					<comments>https://wesleytw.github.io/2020/07/03/215/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 02 Jul 2020 16:17:02 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=215</guid>
+
+					<description><![CDATA[<p>大家都知道區塊鏈有去中心化、不可竄改的特性，藉由這些特點，我們可以利用它來執行需要公平、公正、公開的程式，像是金融、博弈、契約等相關的應用。說到這裡，可能有人會想說既然不可竄改那不就代表程式放上區塊鏈就寫死不會動了嗎?其實應該說是遊戲規則是寫死的，但是參數是可以依據規則改變的，之後實作就知道是怎麼回事了。 智能合約是由叫做solidity的程式語言編寫，可以用線上編輯器remix編寫，也能在VScode裡下載環境編寫，我個人最常用remix編寫，因為可以直接部屬到測試鏈上測試，所以我就以remix來說明。 先從左邊的按鈕講起，第一個按鈕式檔案管理區，在這裡可以新增檔案，而solidity檔案的附檔名式.sol 第二個按鈕這區可以選擇 solidity的版本，solidity算是很新的語言所以更新速度很快，且各版本差異都蠻大的，所以編寫的版本需要多留意，而下方的Auto compile選項我建議可以勾選。 第三個按鈕可以選擇環境，javascriptVM虛擬機是指連測試鏈都沒有連上，直接在本地模擬。injected Web3是指透過metamask等工具和區塊鏈互動。web3provider是連到Ganache的虛擬環境。這裡我們只會用到javaVM和injectweb3，在做一般測試的時候使用javaVM因為速度比較快，injectweb3則是部屬合約會用到。 除此之外，我們還要先安裝剛才提到的metamask，metamesk算是個和區塊鏈互動的橋樑，也是存放加密貨幣的錢包，為甚麼要用到錢包?因為我們除了調閱之外的動作如部屬合約以及更改鏈上資料是需要付手續費給礦工的。安裝方法很簡單，進到chrome擴充程式商店下載安裝，照指示創造錢包，若還是有問題可以參考這篇。 安裝且創建完錢包之後，請切換到Ropsten test network，並且到水龍頭領取測試代幣，當然如果你錢很多想直接用主鏈也是可以的^_^ 完成上述步驟後，編寫環境差不多都熟悉了，下一篇我們開始了解語法。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/03/215/">程式麻瓜打造區塊鏈網站5–智能合約介紹、編寫環境</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/03/215/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站4-超強大chrome編輯網頁小工具VisBug</title>
+		<link>https://wesleytw.github.io/2020/07/01/79/</link>
+					<comments>https://wesleytw.github.io/2020/07/01/79/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 01 Jul 2020 03:49:23 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=79</guid>
+
+					<description><![CDATA[<p>在排版網頁的時候每次都要一直調位置座標超級麻煩(應該是我學藝不精)，還好我發現一個chrome extention VisBug 能以滑鼠直接移動位置。 用法很簡單，首先將你要修改的網頁用chrome開啟，點擊visbug圖示，在左邊的欄位選擇第十個看起來像是方向鍵的圖示，再以拖移的方式調整你要修改的區域 再點visbug圖示，把它關掉，在空白處按右鍵，點檢查，到&#60;html&#62;的標籤上按右鍵複製html程式碼，之後回到編輯器把整個程式碼覆蓋就完成了 當然visbug還有很多功能像是打文字、換顏色之類的，甚至可以直接別人的網頁來修改，建議去實做看看，它可以幫助你更了解整個網頁程式的各種功能。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/01/79/">程式麻瓜打造區塊鏈網站4-超強大chrome編輯網頁小工具VisBug</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/01/79/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站3-css/js和網頁特效</title>
+		<link>https://wesleytw.github.io/2020/07/01/65/</link>
+					<comments>https://wesleytw.github.io/2020/07/01/65/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 30 Jun 2020 16:18:29 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=65</guid>
+
+					<description><![CDATA[<p>網頁程式語言可不是只有HTML一種，另外還有兩種常見的語言css和javascript，css是用來作美編的，能控制文字顏色和邊框等&#8230;JS則是控制網頁的動作等&#8230; 至於怎麼編寫呢?我這裡暫時就講不太多，我主要教各位如何將她加入網頁以及如何把別人寫好的程式放入自己的網頁裡，畢竟現在那麼多開放無版權的程式碼，隨便挑幾個拼湊起來也是能做出像樣的東西。 寫入css和js有以下幾種方式: 一.CSS: 1.Inline Style直接在標籤內添加CSS: 2.Internal Style Sheet: 在&#60;head&#62;標籤內統一管理樣式: 3. Enternal Style Sheet — link: 引入CSS檔案，在head加入以下此行，href後面是放檔案名稱，如此，當打開index.html就會讀到css檔案，這個概念和img一樣 這方法要先在當初放有index.html的資料夾建立副檔名為.css的檔案，如下 上述各方法的衝突時的優先：Inline &#62; Internal &#62; Link/Import &#62;Browser Default 二.JAVASCRIPT: 1.internal script:在&#60;body&#62;標籤內插入script 2.external:引入JS檔案，在body加入以下此行，href後面是放檔案名稱 像是上面這個codepen網站裡有很多特效，使用方法將html css js 分別複製下來使用，另外還有animista也很好用，如果有更厲害的資源歡迎留言分享</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/01/65/">程式麻瓜打造區塊鏈網站3-css/js和網頁特效</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/01/65/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>程式麻瓜打造區塊鏈網站2-HTML介紹</title>
+		<link>https://wesleytw.github.io/2020/07/01/151/</link>
+					<comments>https://wesleytw.github.io/2020/07/01/151/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 30 Jun 2020 16:18:00 +0000</pubDate>
+				<category><![CDATA[Blockchain]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Dapp]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[smartcontract]]></category>
+		<category><![CDATA[區塊鏈]]></category>
+		<category><![CDATA[智能合約]]></category>
+		<category><![CDATA[網頁架設]]></category>
+		<category><![CDATA[網頁程式]]></category>
+		<category><![CDATA[網頁設計]]></category>
+		<guid isPermaLink="false">https://wesleytw.github.io/?p=151</guid>
+
+					<description><![CDATA[<p>HTML是一種網頁程式，他的架構是由標籤組成，html這個標籤包著head和body，這兩個標籤又包著其他標籤，head裡面主要放瀏覽器上標籤頁的標題title和其引入其他程式的連結，&#60;body&#62;就是放要顯示在網頁的內容如文字、照片等，而標籤的結尾是/，以下直接由範例說明: 這行就只是說明這是HTML檔案 沒什麼功能&#160; 這個箭頭加驚嘆號裡可以放註解解釋你的程式碼 不會顯示 title裡是分頁(tab)的標題&#160; h1裡包要顯示在網頁的文字 數字表示文字大小 最多到6 p一樣包文字 顯示出來是一般文字&#160; hr/換行 &#160;img是圖片src是圖片位置 圖片直接放在你建立的含有index.html的資料夾內 src=”放入圖片檔名” a可以超連結文字&#160;用herf=”網址”表示 target=”_blank”表示用新的分頁開啟 input 是輸入 type是種類 checkbox是多選盒 是表單裡面放文字輸入框和提交按鈕 如下 text是一般的人字輸入框 只有一行&#160; email只能輸入email形式&#160; textarea是無限大的文字框&#160; button是按紐 class決定按紐的形狀等 onclick是只當他被點下會執行甚麼之後在JS會提到&#160; 以下是整個網頁程式的範例，將整個HTML碼複製起來貼到vscode裡你創建的index.html再用瀏覽器index.html打開就能看到效果了 基本上只要自己實際複製貼上到自己的電腦裡玩玩，像是改文字、改順序之類的，就大概了解HTML怎麼用了。若覺得我講的不清楚歡迎留言或聯絡我。</p>
+<p>The post <a rel="nofollow" href="https://wesleytw.github.io/2020/07/01/151/">程式麻瓜打造區塊鏈網站2-HTML介紹</a> appeared first on <a rel="nofollow" href="http://wesleytw.github.io/">劉承瑋</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://wesleytw.github.io/2020/07/01/151/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

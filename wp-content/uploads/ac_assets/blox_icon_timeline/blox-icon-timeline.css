@@ -1,0 +1,15 @@
+.blox-icon-timeline * {margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.blox-icon-timeline {font-family: inherit;font-size: 14px;color: #333;padding: 0px 20px;margin: 0px;list-style: none;text-align: left;}
+.blox-icon-timeline li {position: relative;padding: 20px 0 0px 0;margin: 0px 0 0px 0px;}
+.blox-icon-timeline li ul {list-style: none;margin: 10px 0 0 0;}
+.blox-icon-timeline li ul li:before {display: none;}
+.blox-icon-timeline li:last-child::before {height: 81%;display: none;}
+.blox-icon-timeline li ul li {margin: 0;padding: 4px 0 4px 0;}
+.blox-icon-timeline li:before {position: absolute;left: 26px;top: 22px;content: "";height: 100%;border-left: 3px solid #d7e4ed;}
+.blox-icon-timeline li .blox-wrapper {padding: 20px 24px 20px 28px;margin: 0 0 0 84px;position: relative;}
+.blox-icon-timeline li .blox-wrapper:before {display: block;content: "";}
+.blox-icon-timeline .blox-content {font-size: 14px;line-height: 19px;padding: 0 0 12px 0;}
+.blox-icon-timeline .blox-heading {font-size: 18px;font-weight: bold;margin: 0 0 12px 0;}
+.blox-icon-timeline li .blox-wrapper:before {width: 20px;height: 20px;display: block;content: "";transform: rotate(-45deg);position: absolute;left: -9px;top: 20px;background-color: inherit;}
+.blox-icon-timeline .blox-icon {position: absolute;font-size: 20px;color: #fff;left: -77px;top: 0px;line-height: 54px;text-align: center;width: 54px;height: 54px;margin: 0px 0 0px -7px;display: block;border-radius: 50%;}
+.blox-icon-timeline .blox-date {font-style: italic;}

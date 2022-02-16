@@ -1,0 +1,14 @@
+.uc_classic_content * {margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.uc_classic_content .uc {margin: 0 auto;}
+.uc_classic_content .uc_classic_content_container_holder {font-size: 16px;line-height: 24px;overflow: hidden;color: #8a8a8a;font-weight: 400;text-align: center;display: inline-block;background-color: #fff;box-shadow: rgba(0,0,0,.1) 0px 5px 10px;padding: 20px;position: relative;width: 100%;}
+.owl-carousel .owl-stage-outer {overflow: hidden;}
+.uc_classic_content .uc_classic_content_content h2 {font-size: 20px;font-weight: 700;margin-bottom: 8px;}
+.uc_classic_content .uc_classic_content_content p {margin-bottom: 30px;}
+.uc_classic_content .uc_classic_content_border {height: 4px;display: block;width: 100px;position: absolute;left: 50%;top: 0px;margin-left: -50px;}
+.uc_classic_content  .uc_classic_content_placeholder {background-color: #fff;padding-bottom: 20px;}
+.uc_classic_content  .uc_classic_content_placeholder img {width: 100%;}
+.uc_classic_content .uc_classic_content_content .uc_more_btn {display: block;border-radius: 26px;width: 168px;line-height: 52px;font-size: 16px;margin: 0 auto 10px;text-decoration: none;transition: all .5s ease;}
+.uc_classic_content .owl-dots {overflow: hidden;display: block;text-align: center;margin-top: 22px;}
+.uc_classic_content .owl-dot {background-color: #c4c4cc;width: 6px;height: 6px;border-radius: 50%;display: inline-block;margin: 4px 15px 3px;}
+.uc_classic_content .owl-dot.active {background-color: #333;width: 14px;height: 14px;margin: 0 15px;}
+.uc_classic_content .owl-carousel.owl-drag .owl-item {padding: 0 .2% 0;}
